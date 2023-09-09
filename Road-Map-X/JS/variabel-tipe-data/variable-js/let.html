@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Variabel dengan let</title>
+    <script>
+        // Deklarasi variabel menggunakan let
+        let jumlahKlik = 0;
+        
+        // Menggunakan variabel dan menampilkannya di halaman web
+        function tambahKlik() {
+            jumlahKlik++;
+            document.getElementById("output").textContent = "Jumlah Klik: " + jumlahKlik;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="tambahKlik()">Klik Saya</button>
+    <p id="output">Jumlah Klik: 0</p>
+</body>
+</html>

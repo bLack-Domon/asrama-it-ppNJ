@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Variabel dengan const</title>
+    <script>
+        // Deklarasi variabel menggunakan const
+        const pi = 3.14;
+        
+        // Menggunakan variabel dan menampilkannya di halaman web
+        function hitungLuasLingkaran() {
+            // Mengambil nilai jari-jari dari input
+            const jariJariInput = document.getElementById("jari-jari").value;
+            // Konversi nilai jari-jari ke tipe data Number
+            const jariJari = parseFloat(jariJariInput);
+
+            // Periksa apakah nilai jari-jari valid (bukan NaN)
+            if (!isNaN(jariJari)) {
+                const luas = pi * jariJari * jariJari;
+                document.getElementById("output").innerHTML = "Luas Lingkaran: " + luas + " cm<sup>2</sup>";
+            } else {
+                document.getElementById("output").textContent = "Masukkan nilai jari-jari yang valid.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="jari-jari">Jari-Jari Lingkaran:</label>
+    <input type="text" id="jari-jari">
+    <button onclick="hitungLuasLingkaran()">Hitung Luas Lingkaran</button>
+    <p id="output">Luas Lingkaran: 0</p>
+</body>
+</html>

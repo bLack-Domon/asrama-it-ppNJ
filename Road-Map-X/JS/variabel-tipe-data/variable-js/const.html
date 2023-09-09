@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Variabel dengan const</title>
+    <script>
+        // Deklarasi variabel menggunakan const
+        const pi = 3.14;
+        let jariJari = 10;
+        
+        // Menggunakan variabel dan menampilkannya di halaman web
+        function hitungLuasLingkaran(jariJari) {
+            const luas = pi * jariJari * jariJari;
+            document.getElementById("output").textContent = "Luas Lingkaran: " + luas;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="hitungLuasLingkaran(jariJari)">Hitung Luas Lingkaran</button>
+    <p id="output">Luas Lingkaran: 0</p>
+</body>
+</html>

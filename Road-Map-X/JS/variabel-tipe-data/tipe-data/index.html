@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Tipe Data JavaScript</title>
+</head>
+<body>
+    <h1>Data JavaScript</h1>
+
+    <p>Contoh String:</p>
+    <p id="stringExample"></p>
+
+    <p>Contoh Number:</p>
+    <p id="numberExample"></p>
+
+    <p>Contoh Boolean:</p>
+    <p id="booleanExample"></p>
+
+    <p>Contoh Array:</p>
+    <ul id="arrayExample"></ul>
+
+    <p>Contoh Object:</p>
+    <pre id="objectExample"></pre>
+
+    <script>
+        // Contoh Tipe Data String
+        var stringData = "Ini adalah contoh string.";
+        document.getElementById("stringExample").textContent = stringData;
+
+        // Contoh Tipe Data Number
+        var numberData = 42;
+        document.getElementById("numberExample").textContent = numberData.toString();
+
+        // Contoh Tipe Data Boolean
+        var booleanData = true;
+        document.getElementById("booleanExample").textContent = booleanData.toString();
+
+        // Contoh Tipe Data Array
+        var arrayData = [1, 2, 3, 4, 5];
+        var arrayExampleList = document.getElementById("arrayExample");
+        arrayData.forEach(function(item) {
+            var listItem = document.createElement("li");
+            listItem.textContent = item.toString();
+            arrayExampleList.appendChild(listItem);
+        });
+
+        // Contoh Tipe Data Object
+        var objectData = {
+            nama: "John",
+            usia: 30,
+            pekerjaan: "Pengembang Web"
+        };
+        document.getElementById("objectExample").textContent = JSON.stringify(objectData, null, 2);
+    </script>
+</body>
+</html>
