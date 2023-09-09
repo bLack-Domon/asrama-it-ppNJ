@@ -1,0 +1,4 @@
+/* styles.css */
+q::before {
+ content: "“";
+}

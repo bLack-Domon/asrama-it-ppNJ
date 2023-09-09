@@ -1,0 +1,83 @@
+/* Gaya dasar yang akan diterapkan pada semua perangkat */
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+}
+
+header {
+ background-color: #333;
+ color: #fff;
+ text-align: center;
+ padding: 20px;
+}
+
+nav ul {
+ list-style-type: none;
+ padding: 0;
+}
+
+nav li {
+ display: inline;
+ margin-right: 20px;
+}
+
+main {
+ padding: 20px;
+}
+
+section {
+ margin-bottom: 20px;
+}
+
+footer {
+ background-color: #333;
+ color: #fff;
+ text-align: center;
+ padding: 10px;
+}
+
+/* Media Queries untuk Tampilan Responsif */
+@media screen and (max-width: 768px) {
+ header {
+     font-size: 24px;
+     padding: 10px;
+ }
+
+ nav li {
+     margin-right: 10px;
+ }
+
+ main {
+     padding: 10px;
+ }
+}
+
+@media screen and (max-width: 480px) {
+ header {
+     font-size: 20px;
+     padding: 5px;
+ }
+
+ nav {
+     text-align: center;
+ }
+
+ nav li {
+     display: block;
+     margin: 5px 0;
+ }
+
+ main {
+     padding: 5px;
+ }
+
+ section {
+     margin-bottom: 10px;
+ }
+
+ footer {
+     font-size: 12px;
+     padding: 5px;
+ }
+}
