@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Container</title>
+    <style>
+        /* Tambahkan styling untuk kontainer-list */
+        #container-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Tambahkan styling untuk setiap kontainer */
+        .container-item {
+            flex: 0 0 calc(30% - 10px); /* 33 untuk 3 kolom, dengan margin 10px di setiap sisi */
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        /* Tambahkan styling untuk gambar */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container-list"></div>
+
+    <script>
+        // Data nama dan URL foto
+        const data = [
+            { nama: "Orang Pertama", foto: "url_gambar1.jpg" },
+            { nama: "Orang Kedua", foto: "url_gambar2.jpg" },
+            { nama: "Orang Ketiga", foto: "url_gambar3.jpg" },
+            { nama: "Orang Ketiga", foto: "url_gambar3.jpg" }
+            // Tambahkan data lainnya sesuai kebutuhan
+        ];
+
+        // Ambil elemen kontainer-list
+        const containerList = document.getElementById('container-list');
+
+        // Loop melalui data dan buat kontainer untuk setiap elemen
+        data.forEach(item => {
+            // Buat elemen kontainer
+            const container = document.createElement('div');
+            container.classList.add('container-item');
+
+            // Buat elemen nama
+            const namaElement = document.createElement('h2');
+            namaElement.textContent = item.nama;
+
+            // Buat elemen gambar
+            const fotoElement = document.createElement('img');
+            fotoElement.src = item.foto;
+
+            // Tambahkan elemen nama dan gambar ke dalam kontainer
+            container.appendChild(namaElement);
+            container.appendChild(fotoElement);
+
+            // Tambahkan kontainer ke dalam kontainer-list
+            containerList.appendChild(container);
+        });
+    </script>
+</body>
+</html>

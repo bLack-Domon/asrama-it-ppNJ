@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Perulangan While di JavaScript</title>
+</head>
+<body>
+    <h1>Contoh Perulangan While di JavaScript</h1>
+    <p>Angka dari 1 hingga 5:</p>
+    <ul id="hasilPerulangan">
+    </ul>
+
+    <script>
+        // Inisialisasi variabel
+        var i = 1;
+        var hasilPerulangan = document.getElementById("hasilPerulangan");
+
+        // Perulangan while
+        while (i <= 5) {
+            // Membuat elemen list untuk menampilkan angka
+            var listItem = document.createElement("li");
+            listItem.textContent = "Angka " + i;
+
+            // Menambahkan elemen list ke dalam elemen ul
+            hasilPerulangan.appendChild(listItem);
+
+            // Menambahkan nilai i
+            i++;
+        }
+    </script>
+</body>
+</html>

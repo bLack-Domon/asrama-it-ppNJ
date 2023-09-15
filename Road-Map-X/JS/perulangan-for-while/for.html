@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Perulangan For di Tabel</title>
+</head>
+<body>
+  <h1>Data Mahasiswa</h1>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Nama</th>
+        <th>Usia</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Data mahasiswa akan ditambahkan di sini -->
+    </tbody>
+  </table>
+
+  <script>
+    // Data mahasiswa dalam bentuk array objek
+    const dataMahasiswa = [
+      { no: 1, nama: "John Doe", usia: 20 },
+      { no: 2, nama: "Jane Smith", usia: 22 },
+      { no: 3, nama: "Bob Johnson", usia: 21 },
+      { no: 4, nama: "Alice Williams", usia: 23 }
+    ];
+
+    // Ambil elemen tbody dari tabel
+    const tableBody = document.getElementById("table-body");
+
+    // Gunakan perulangan for untuk mengisi tabel dengan data
+    for (let i = 0; i < dataMahasiswa.length; i++) {
+      const mahasiswa = dataMahasiswa[i];
+      
+      // Buat elemen <tr> untuk setiap mahasiswa
+      const row = document.createElement("tr");
+
+      // Buat elemen <td> untuk nomor, nama, dan usia
+      const noCell = document.createElement("td");
+      noCell.textContent = mahasiswa.no;
+
+      const namaCell = document.createElement("td");
+      namaCell.textContent = mahasiswa.nama;
+
+      const usiaCell = document.createElement("td");
+      usiaCell.textContent = mahasiswa.usia;
+
+      // Tambahkan <td> ke dalam <tr>
+      row.appendChild(noCell);
+      row.appendChild(namaCell);
+      row.appendChild(usiaCell);
+
+      // Tambahkan <tr> ke dalam tabel
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>

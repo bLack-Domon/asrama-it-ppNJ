@@ -1,0 +1,38 @@
+body{
+  background-image: url('https://mocipay.com/blog/wp-content/uploads/2022/09/background-coklat-aesthetic-motif-kayu-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-wrapper {
+  display: grid;
+  grid-template-columns: 65% auto; /* Dua kolom dengan ukuran otomatis */
+}
+
+/* Tambahkan styling untuk kontainer-list */
+#container-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 0px;
+}
+
+/* Tambahkan styling untuk setiap kontainer */
+.container-item {
+  flex: 0 0 calc(20% - 10px); /* 33 untuk 3 kolom, dengan margin 10px di setiap sisi */
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Tambahkan styling untuk gambar */
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+  border: 3px solid rgb(141, 141, 141);
+}

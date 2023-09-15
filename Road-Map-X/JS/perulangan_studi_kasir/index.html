@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warung Kang Domon</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/kasir.css">
+  </head>
+  <body>
+    <div class="container-wrapper">
+      <div id="container-list"></div>
+      <div class="container">
+        <h1 align="center">Warung Kang Domon</h1>
+        <hr>
+
+        <div class="menu-options">
+          <label>
+            <input type="radio" name="menuType" value="makanan" /> Makanan
+          </label>
+          <label>
+            <input type="radio" name="menuType" value="minuman" /> Minuman
+          </label>
+          <label>
+            <input type="radio" name="menuType" value="keduanya" /> Makanan &
+            Minuman
+          </label>
+        </div>
+
+        <div class="menu-list" id="makananMenu">
+          <hr>
+          <h2>Menu Makanan</h2>
+          <label>
+            <input
+              type="checkbox"
+              class="menu-item"
+              value="Mie Goreng"
+              data-harga="10000"
+            />
+            Mie Goreng - Rp 10.000
+            <input type="number" class="menu-quantity" value="1" min="1"/>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="menu-item"
+              value="Nasi Goreng"
+              data-harga="12000"
+            />
+            Nasi Goreng - Rp 12.000
+            <input type="number" class="menu-quantity" value="1" min="1" />
+          </label>
+          <hr>
+        </div>
+
+        <div class="menu-list" id="minumanMenu">
+          <hr>
+          <h2>Menu Minuman</h2>
+          <label>
+            <input
+              type="checkbox"
+              class="menu-item"
+              value="Es Teh"
+              data-harga="5000"
+            />
+            Es Teh - Rp 5.000
+            <input type="number" class="menu-quantity" value="1" min="1" />
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="menu-item"
+              value="Es Jeruk"
+              data-harga="6000"
+            />
+            Es Jeruk - Rp 6.000
+            <input type="number" class="menu-quantity" value="1" min="1" />
+          </label>
+          <hr>
+        </div>
+
+        <label for="total">Total Harga:</label>
+        <input type="text" id="total" readonly value="Belum ada pembayaran" />
+
+        <label for="uang">Jumlah Uang:</label>
+        <input type="text" id="uang" />
+
+        <label for="kembalian">Kembalian:</label>
+        <input
+          type="text"
+          id="kembalian"
+          readonly
+          value="Belum ada pembayaran"
+        />
+
+        <button onclick="hitungTotal()">Bayar</button>
+      </div>
+    </div>
+
+    <script src="js/kasir.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
