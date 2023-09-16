@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Auto-Custom Page | JS</title>
+ <style>
+  body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   display: flex;
+  }
+  .container {
+   width: 25%;
+   background-color: black;
+   color: white;
+   padding: 25px;
+  }
+  .menu {
+   display: block;
+   margin-bottom: 10px;
+  }
+  .menu label {
+   background-color: white;
+   color: black;
+   padding: 10px;
+   display: block;
+  }
+  .menu label input {
+   margin-right: 10px;
+  }
+  .content-container {
+   flex: 1;
+   padding: 25px;
+   background-color: rgb(71, 60, 60);
+   height: 528px;
+  }
+  #konten1{
+   background-color: white;
+   text-align: center;
+   width: 300px;
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  #konten2{
+   background-color: rgb(0, 0, 0);
+   color: white;
+   text-align: center;
+   width: 300px;
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1>Page Control</h1>
+  <p>Setup here!</p>
+  <hr>
+  
+  <h2>Background</h2>
+  <label class="menu">
+   <input type="radio" name="background" value="Background 1" onclick="changeBackground('Background 1')">
+   Background 1
+  </label>
+
+  <label class="menu">
+   <input type="radio" name="background" value="Background 2" onclick="changeBackground('Background 2')">
+   Background 2
+  </label>
+
+  <!-- Add more background options as needed -->
+
+  <h2>Content</h2>
+  <label class="menu">
+   <input type="radio" name="content" value="Content 1" onclick="changeContent('Content 1')">
+   Content 1
+  </label>
+
+  <label class="menu">
+   <input type="radio" name="content" value="Content 2" onclick="changeContent('Content 2')">
+   Content 2
+  </label>
+
+  <!-- Add more content options as needed -->
+
+ </div>
+
+ <div class="content-container" id="contentArea">
+  <div id="konten1" style="display: none;">
+   <h2>Content Area 1</h2>
+   <p>This is the default content area 1.</p>
+  </div>
+  <div id="konten2" style="display: none;">
+   <h2>Content Area 2</h2>
+   <p>This is the default content area 2.</p>
+  </div>
+ </div>
+
+ <script>
+  const konten1 = document.getElementById("konten1");
+  const konten2 = document.getElementById("konten2");
+
+  function changeBackground(backgroundOption) {
+    const contentBackground = document.getElementById("contentArea");
+    contentBackground.style.backgroundImage = backgroundOption === 'Background 1' ? "url('https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.jpg')" : "url('https://www.pinhome.id/kamus-istilah-properti/wp-content/uploads/2021/07/tony-liao-aU7ASS_NVPs-unsplash.jpg')";
+    contentBackground.style.backgroundRepeat = 'no-repeat';
+    contentBackground.style.backgroundSize = 'cover';
+  }
+
+  function changeContent(contentOption) {
+    if (contentOption === 'Content 1') {
+      konten1.style.display = 'block';
+      konten2.style.display = 'none';
+    } else if (contentOption === 'Content 2') {
+      konten1.style.display = 'none';
+      konten2.style.display = 'block';
+    }
+  }
+ </script>
+</body>
+</html>
