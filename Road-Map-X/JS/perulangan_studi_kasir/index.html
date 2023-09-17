@@ -6,10 +6,12 @@
     <title>Warung Kang Domon</title>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/kasir.css">
+    <link rel="stylesheet" href="css/detail.css">
   </head>
   <body>
     <div class="container-wrapper">
       <div id="container-list"></div>
+    
       <div class="container">
         <h1 align="center">Warung Kang Domon</h1>
         <hr>
@@ -95,9 +97,22 @@
 
         <button onclick="hitungTotal()">Bayar</button>
       </div>
+        <!-- HTML untuk modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Gambar Modal">
+            <span id="namaMenu" class="namaMenu"></span>
+          </div>
+        </div>
     </div>
+   
+
+    
+  
 
     <script src="js/kasir.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/detail.js"></script>
   </body>
 </html>
