@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Manipulation in JavaScript</title>
+</head>
+<body>
+
+<script>
+  // Membuat Array
+  let numbersArray = [1, 2, 3, 4, 5];
+  let fruitsArray = ['Apple', 'Banana', 'Cherry'];
+
+  // Mengakses Elemen Array
+  console.log(numbersArray[0]); // Output: 1
+  console.log(fruitsArray[1]); // Output: Banana
+
+  // Mengubah Elemen Array
+  numbersArray[1] = 10;
+  console.log(numbersArray); // Output: [1, 10, 3, 4, 5]
+
+  // Menambahkan Elemen ke Akhir Array
+  fruitsArray.push('Orange');
+  console.log(fruitsArray); // Output: ['Apple', 'Banana', 'Cherry', 'Orange']
+
+  // Menghapus Elemen dari Akhir Array
+  fruitsArray.pop();
+  console.log(fruitsArray); // Output: ['Apple', 'Banana', 'Cherry']
+
+  // Menghapus Elemen dari Awal Array
+  fruitsArray.shift();
+  console.log(fruitsArray); // Output: ['Banana', 'Cherry']
+
+  // Menambahkan Elemen ke Awal Array
+  fruitsArray.unshift('Grapes');
+  console.log(fruitsArray); // Output: ['Grapes', 'Banana', 'Cherry']
+
+  // Menghapus Elemen di Tengah Array
+  fruitsArray.splice(1, 1); // Menghapus elemen di indeks 1
+  console.log(fruitsArray); // Output: ['Grapes', 'Cherry']
+
+  // Menggabungkan Array
+  let combinedArray = fruitsArray.concat(numbersArray);
+  console.log(combinedArray); // Output: ['Grapes', 'Cherry', 1, 10, 3, 4, 5]
+</script>
+
+</body>
+</html>

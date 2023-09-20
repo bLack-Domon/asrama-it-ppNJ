@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Objek dalam JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #displayTable {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #displayTable th, #displayTable td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #displayTable th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Informasi Pengguna</h1>
+
+<form id="userForm">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" placeholder="Masukkan nama" required><br><br>
+
+    <label for="usia">Usia:</label>
+    <input type="number" id="usia" placeholder="Masukkan usia" required><br><br>
+
+    <label for="alamat">Alamat:</label>
+    <input type="text" id="alamat" placeholder="Masukkan alamat" required><br><br>
+
+    <button type="submit">Simpan Informasi</button>
+</form>
+
+<h2>Informasi yang Disimpan:</h2>
+<table id="displayTable">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody id="displayInfo"></tbody>
+</table>
+
+<script>
+    const data = [];  // Array untuk menyimpan data
+    const userForm = document.getElementById('userForm');
+    const displayInfo = document.getElementById('displayInfo');
+
+    userForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const namaInput = document.getElementById('nama');
+        const usiaInput = document.getElementById('usia');
+        const alamatInput = document.getElementById('alamat');
+
+        const nama = namaInput.value.trim();
+        const usia = usiaInput.value.trim();
+        const alamat = alamatInput.value.trim();
+
+        if (nama === '' || usia === '' || alamat === '') {
+            alert('Mohon isi semua field.');
+            return;
+        }
+
+        if (data.some(item => item.nama === nama && item.usia === usia && item.alamat === alamat)) {
+            alert('Data dengan nama, usia, dan alamat yang sama sudah ada.');
+            return;
+        }
+
+        const userData = { nama, usia, alamat };
+        data.push(userData);
+
+        const newRow = displayInfo.insertRow();
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        cell1.innerHTML = nama;
+        cell2.innerHTML = usia;
+        cell3.innerHTML = alamat;
+
+        namaInput.value = '';
+        usiaInput.value = '';
+        alamatInput.value = '';
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.my-element {
+ width: 200px;
+ height: 200px;
+ background-color: lightblue;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 18px;
+ cursor: pointer;
+}
+
+.my-element:hover {
+ background-color: lightgreen;
+}

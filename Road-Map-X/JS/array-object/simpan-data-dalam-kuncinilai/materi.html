@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Penggunaan Objek dalam JavaScript</title>
+</head>
+<body>
+
+<script>
+    // Mendefinisikan objek kosong
+    const dataObj = {};
+
+    // Menambahkan pasangan kunci-nilai ke objek
+    dataObj["nama"] = "John Doe";
+    dataObj["usia"] = 30;
+    dataObj["alamat"] = "123 Jalan Contoh, Kota X";
+
+    // Mengakses nilai dengan kunci
+    console.log("Nama: " + dataObj["nama"]); // Output: Nama: John Doe
+    console.log("Usia: " + dataObj["usia"]); // Output: Usia: 30
+    console.log("Alamat: " + dataObj["alamat"]); // Output: Alamat: 123 Jalan Contoh, Kota X
+
+    // Memperbarui nilai dengan kunci yang sudah ada
+    dataObj["usia"] = 31;
+
+    // Menghapus pasangan kunci-nilai
+    delete dataObj["alamat"];
+
+    // Mengakses nilai setelah diperbarui dan dihapus
+    console.log("Usia setelah diperbarui: " + dataObj["usia"]); // Output: Usia setelah diperbarui: 31
+    console.log("Alamat setelah dihapus: " + dataObj["alamat"]); // Output: Alamat setelah dihapus: undefined
+</script>
+
+</body>
+</html>

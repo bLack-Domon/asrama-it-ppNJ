@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Array Manipulation</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Array Manipulation</h1>
+
+    <div class="input-section">
+      <label for="inputArray">Input Array (comma-separated):</label>
+      <input type="text" id="inputArray" placeholder="e.g., 1, 2, 3, 4">
+      <button onclick="createArray()">Create Array</button>
+    </div>
+
+    <div class="manipulation-section">
+      <button onclick="reverseArray()">Reverse Array</button>
+      <button onclick="sortArray()">Sort Array</button>
+      <button onclick="sumArray()">Sum Array</button>
+    </div>
+
+    <div class="output-section">
+      <h2>Output:</h2>
+      <table id="outputTable">
+        <tr>
+          <th>Index</th>
+          <th>Value</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
