@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh SweetAlert2 - Konfirmasi</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+  <button onclick="konfirmasi()">Klik untuk Konfirmasi</button>
+
+  <script>
+    function konfirmasi() {
+      Swal.fire({
+        title: 'Apakah Anda yakin?',
+        text: 'Anda akan melakukan tindakan ini!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, lanjutkan!',
+        cancelButtonText: 'Batal'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Berhasil!',
+            'Tindakan telah berhasil dijalankan.',
+            'success'
+          );
+        }
+      });
+    }
+  </script>
+</body>
+</html>

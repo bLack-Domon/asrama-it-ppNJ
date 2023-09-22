@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval Example</title>
+</head>
+<body>
+  <script>
+    function repeatedTask() {
+      console.log('Tugas ini akan dijalankan setiap 1000 milidetik (1 detik).');
+    }
+
+    const interval = 1000; // Jangka waktu dalam milidetik (1 detik dalam contoh ini)
+    const intervalID = setInterval(repeatedTask, interval);
+
+    // Untuk menghentikan interval setelah 5 detik
+    setTimeout(() => {
+      clearInterval(intervalID);
+      console.log('Interval dihentikan setelah 5 detik.');
+    }, 5000);
+  </script>
+</body>
+</html>
