@@ -1,0 +1,49 @@
+body {
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/5947.png');
+  transition: background 2s ease-in-out;
+}
+
+#tombol-pertama {
+  background-color: transparent;
+  max-width: 180px;
+  margin: 70px auto;
+}
+
+#tombol-pertama img {
+  width: 100%;
+  border: 2px solid rgba(94, 93, 93, 0.87);
+  border-radius: 30px;
+  box-shadow: 
+  -3px 0px 10px rgba(255, 255, 255, 0.452),/* Sisi kiri */ 
+  0px -3px 10px rgba(255, 255, 255, 0.452), /* Sisi atas */
+  3px 0px 10px rgba(255, 255, 255, 0.452),/* Sisi kanan */ 
+  0px 3px 10px rgba(255, 255, 255, 0.452);/* Sisi bawah */ 
+}
+
+p{
+  color: white;
+  margin-top: -50px;
+  animation: leaves 0.7s ease-in-out infinite alternate;
+  -webkit-animation: leaves 1s ease-in-out infinite alternate;
+}
+
+.klik{
+  font-size: 22px;
+  text-shadow: 1px 0px 1px rgb(255, 255, 255);
+  color: rgb(0, 255, 42);
+  /* margin-right: 10px; */
+}
+
+.me{
+  font-size: 30px;
+  color: rgb(238, 255, 0);
+  /* margin-right: 10px; */
+}
+
+.panahku{
+  margin-bottom: -15px;
+}
+
+.sembunyi{
+  display: none !important;
+}

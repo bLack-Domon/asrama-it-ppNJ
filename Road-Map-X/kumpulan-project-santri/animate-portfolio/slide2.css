@@ -1,0 +1,34 @@
+/* Tambahkan ini di dalam tag <style></style> atau dalam file style.css */
+#menuKedua {
+ width: 300px;
+ height: auto;
+ position: relative;
+ margin-left: auto;
+ margin-top: 180px;
+ background-color: rgba(0, 0, 0, 0.548);
+ color: white;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+ text-align: center;
+ /* transition: right 0.5s ease-in-out; */
+}
+
+/* slide2.css */
+#menuKedua {
+ display: none;
+ /* tambahkan animasi */
+ animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+   transform: translateY(-20px);
+ }
+ to {
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
+
