@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Template</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar bg-white navbar-expand-lg">
+        <div class="container-fluid">
+          <img src="logo.png" alt="logo" class="logoku" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="margin-left: auto">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="awal" align="center">
+      <h2 class="gradient">Rekayasa Perangkat Lunak (RPL)</h2>
+
+      <small class="text-muted"
+        >WEB Development &middot; Mobile Dev &middot; Game Development</small
+      >
+
+      <h4 class="text-gradient">SMK Nurul Jadid - Paiton Probolinggo</h4>
+
+      <a href="about.html" class="btn btn-primary mt-4 me-3 btn-lg btstyle"
+        >About</a
+      >
+
+      <a href="contact.html" class="btn btn-lg btstyle btn-outline-dark mt-4"
+        >Contact Us</a
+      >
+    </div>
+
+    <div class="bingkai">
+      <img src="rpl.jpg" class="isiBingkai" />
+    </div>
+
+    <div class="galeri container-fluid">
+      <button onclick="showAll()">Tampil Semua Kategori</button>
+      <button onclick="filterCategory(1)">Kategori 1</button>
+      <button onclick="filterCategory(2)">Kategori 2</button>
+
+      <div class="gallery">
+        <div class="item" data-category="1">Item 1 (Kategori 1)</div>
+        <div class="item" data-category="2">Item 2 (Kategori 2)</div>
+        <div class="item" data-category="1">Item 3 (Kategori 1)</div>
+        <div class="item" data-category="2">Item 4 (Kategori 2)</div>
+      </div>
+    </div>
+
+    <footer align="center">Hak Cipta 2023</footer>
+
+    <script src="script.js" defer></script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
