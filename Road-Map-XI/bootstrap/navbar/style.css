@@ -42,7 +42,24 @@ h5{
  max-height: 250px;
 }
 
+.card-title{
+ font-size: 45px;
+ background-image: linear-gradient(to right, #3333cc, #00d9ff);
+ -webkit-background-clip: text;
+ color: transparent;
+ font-weight: bold;
+ -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+.card-body{
+ background-color: rgb(28, 28, 28);
+}
+
+
 /* body{
  background-image: url('https://cdnb.artstation.com/p/assets/images/images/016/166/501/large/alexander-pines-low-hq.jpg?1551164611');
  background-size: cover;
 } */
+body{
+ font-family: 'Comic Neue', cursive;
+}
