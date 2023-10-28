@@ -1,0 +1,48 @@
+.icon-sosmed{
+ font-size: 25px;
+ color: rgb(0, 0, 0);
+ text-decoration: none !important;
+}
+
+.nav-link{
+ color: rgb(255, 255, 255);
+ font-weight: bolder;
+ font-size: 20px;
+}
+
+.nav-link:hover{
+ color: #ff9939;
+ border-bottom: solid 3px #ff9939;
+ border-top: solid 3px #ff9939;
+}
+
+main{
+ width: 150px;
+ height: 150px;
+ background-color: #ff9939;
+ border-radius: 50%;
+}
+
+.foto{
+ width: 140px;
+ border-radius: 50%;
+ margin-left: 5px;
+ margin-top: 5px;
+}
+
+h5{
+ background-image: linear-gradient(to right, #3333cc, #00d9ff);
+ -webkit-background-clip: text;
+ color: transparent;
+ font-weight: bold;
+ font-size: 60px;
+}
+
+.card-img-top{
+ max-height: 250px;
+}
+
+/* body{
+ background-image: url('https://cdnb.artstation.com/p/assets/images/images/016/166/501/large/alexander-pines-low-hq.jpg?1551164611');
+ background-size: cover;
+} */
