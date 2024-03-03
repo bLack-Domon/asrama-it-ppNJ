@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Sekolah</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <img src="img/images.jpg" alt="">
+    <h1>PENDAFTARAN SEKOLAH</h1>
+    <h2>SMA NURUL JADID</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+        
+        <label for="ttl">Tempat dan Tanggal Lahir:</label>
+        <input type="text" id="ttl" name="ttl" placeholder="Contoh: Jakarta, 1 Januari 2000" required>
+        
+        <label for="asalSekolah">Asal Sekolah:</label>
+        <input type="text" id="asalSekolah" name="asalSekolah" required>
+        
+        <label for="program">Program yang akan dipilih:</label>
+        <select id="program" name="program" required>
+            <option value="">Pilih Program</option>
+            <option value="IPA">IPA</option>
+            <option value="IPS">IPS</option>
+            <option value="Bahasa">Bahasa</option>
+        </select>
+        
+        <input type="submit" value="Daftar">
+    </form>
+</div>
+
+<script src="js/SCRIPT.JS"> </script>
+
+</body>
+</html>
