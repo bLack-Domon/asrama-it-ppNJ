@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Siswa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <header>
+                <div class="logo">
+                    <img src="img/images-removebg-preview.png" alt="Logo Sekolah">
+                </div>
+                <h1>Pendaftaran Forum komunikasi OSIS (FKO)</h1>
+            </header>
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <div class="error" id="namaError"></div>
+            </div>
+            <div class="form-group">
+                <label for="nama">Tempat Lahir:</label>
+                <input type="text" id="nama" name="nama" required>
+                <div class="error" id="namaError"></div>
+            </div>
+            <div class="form-group">
+                <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir"><br><br>
+                <div class="error" id="ttlError"></div>
+            </div>
+            <div class="form-group">
+                <label for="asalSekolah">Asal Sekolah:</label>
+                <input type="text" id="asalSekolah" name="asalSekolah" required>
+                <div class="error" id="asalSekolahError"></div>
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto Diri:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required>
+                <div class="error" id="fotoError"></div>
+                <img id="previewImage" src="#" alt="Foto Diri" style="display:none; max-width: 200px;">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
